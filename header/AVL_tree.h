@@ -16,22 +16,22 @@ class AVL_Tree
 {
 public:
     AVL_Tree(int value_to_root);
-    int find(int value_to_find);
-    int insert(int value_to_insert);
-    int size();
-    int empty();
-    void maximum(int key_of_sub_root);
-    void minimum(int key_of_sub_root);
-    void rank(int key_of_rank);
-    void erase(int key_of_erase);
+    int Find(int value_to_find);
+    int Insert(int value_to_insert);
+    int Size();
+    int Empty();
+    void Maximum(int key_of_sub_root);
+    void Minimum(int key_of_sub_root);
+    void Rank(int key_of_rank);
+    void Erase(int key_of_erase);
 
 private:
-    int getHeight(int key_of_node);
-    void balancing(Node *node_to_balancing);
-    void reParenting(Node *node_to_reParenting);
-    int getBalanceFactor(Node *node_to_check);
-    Node *rotateLeft(Node *node_to_rotate);
-    Node *rotateRight(Node *node_to_rotate);
+    int GetHeight(int key_of_node);
+    void Balancing(Node *node_to_balancing);
+    void ReParenting(Node *node_to_reParenting);
+    int GetBalanceFactor(Node *node_to_check);
+    Node *RotateLeft(Node *node_to_rotate);
+    Node *RotateRight(Node *node_to_rotate);
     Node *root_;
     int size_;
 };
