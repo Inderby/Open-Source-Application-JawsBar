@@ -12,9 +12,7 @@
 AVL_Tree::AVL_Tree(int value_to_root) : root_{new Node(value_to_root)} {};
 
 //return tree size
-int Size(){
-  return size_;
-}
+int Size() { return size_; }
 
 //find maximun node in sub_tree that key value is root
 void Maximun(int key_of_sub_root){
