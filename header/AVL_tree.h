@@ -33,6 +33,7 @@ private:
     Node *rotateLeft(Node *node_to_rotate);
     Node *rotateRight(Node *node_to_rotate);
     Node *root_;
+    int size_;
 };
 
 #endif // OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
