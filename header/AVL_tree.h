@@ -16,26 +16,26 @@
 class AVL_Tree
 {
 public:
-    AVL_Tree(int value_to_root);
-    int Find(int value_to_find);
-    int Insert(int value_to_insert);
-    int Size();
-    int Empty();
-    void Maximum(int key_of_sub_root);
-    void Minimum(int key_of_sub_root);
-    void Rank(int key_of_rank);
-    void Erase(int key_of_erase);
+  AVL_Tree(int value_to_root);
+  int Find(int value_to_find);
+  int Insert(int value_to_insert);
+  int Size();
+  int Empty();
+  void Maximum(int key_of_sub_root);
+  void Minimum(int key_of_sub_root);
+  void Rank(int key_of_rank);
+  void Erase(int key_of_erase);
 
 private:
-    int GetHeight(Node *node_to_check);
-    void Balancing(Node *node_to_balancing);
-    void ReParenting(Node *node_to_reParenting);
-    int GetBalanceFactor(Node *node_to_check);
-    Node *InternalInsert(Node *root_of_sub_tree, int value_to_insert);
-    Node *RotateLeft(Node *node_to_rotate);
-    Node *RotateRight(Node *node_to_rotate);
-    Node *root_;
-    int size_;
+  int GetHeight(Node *node_to_check);
+  void Balancing(Node *node_to_balancing);
+  void ReParenting(Node *node_to_reParenting);
+  int GetBalanceFactor(Node *node_to_check);
+  Node *InternalInsert(Node *root_of_sub_tree, int value_to_insert);
+  Node *RotateLeft(Node *node_to_rotate);
+  Node *RotateRight(Node *node_to_rotate);
+  Node *root_;
+  int size_;
 };
 
 #endif // OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_

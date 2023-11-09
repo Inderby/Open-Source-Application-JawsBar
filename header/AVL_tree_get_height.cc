@@ -11,8 +11,8 @@
 
 int AVL_Tree::GetHeight(Node *node_of_check)
 {
-    if (node_of_check == nullptr)
-        return 0;
-    else
-        return node_of_check->height;
+  if (node_of_check == nullptr)
+    return 0;
+  else
+    return node_of_check->height;
 }
