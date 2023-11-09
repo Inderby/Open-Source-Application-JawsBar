@@ -31,9 +31,11 @@ private:
   void Balancing(Node *node_to_balancing);
   void ReParenting(Node *node_to_reParenting);
   int GetBalanceFactor(Node *node_to_check);
+  Node *Exist(int value_to_search);
   Node *InternalInsert(Node *root_of_sub_tree, int value_to_insert);
   Node *RotateLeft(Node *node_to_rotate);
   Node *RotateRight(Node *node_to_rotate);
+  Node *Root();
   Node *root_;
   int size_;
 };
