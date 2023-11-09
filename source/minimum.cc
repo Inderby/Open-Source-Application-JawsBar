@@ -10,11 +10,6 @@
 #include <iostream>
 #include "../header/AVL_tree.h"
 
-// 루트 노드 접근자
-Node* Root(){
-  return this.root_;
-}
-
 // 최솟값을 구하는 함수 구현
 void Minimum(int key_of_sub_root){
   // 노드 포인터 타입 변수인 현재_노드에 메인 루트 대입
