@@ -9,6 +9,8 @@
 
 #include "AVL_tree.h"
 
+#include <iostream>
+
 //find maximum node in sub_tree that key value is root
 void AVL_Tree::Maximum(int key_of_sub_root){
   //find node in AVL tree 
@@ -29,7 +31,7 @@ void AVL_Tree::Maximum(int key_of_sub_root){
   }
 
   //print subtree maximum  key, depth
-  cout << max_key << " " << max_node_depth << endl;
+  std::cout << max_key << " " << max_node_depth << "\n";
   return;
 }
 ~
