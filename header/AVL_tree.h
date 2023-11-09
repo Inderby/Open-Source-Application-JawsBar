@@ -26,7 +26,7 @@ public:
     void Erase(int key_of_erase);
 
 private:
-    int GetHeight(int key_of_node);
+    int GetHeight(Node *node_to_check);
     void Balancing(Node *node_to_balancing);
     void ReParenting(Node *node_to_reParenting);
     int GetBalanceFactor(Node *node_to_check);
