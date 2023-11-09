@@ -24,7 +24,6 @@ public:
     void Minimum(int key_of_sub_root);
     void Rank(int key_of_rank);
     void Erase(int key_of_erase);
-    Node* Root();
 
 private:
     int GetHeight(int key_of_node);
