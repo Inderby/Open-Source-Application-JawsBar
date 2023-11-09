@@ -8,3 +8,8 @@
  */
 
 #include "../header/AVL_tree.h"
+
+//엠프티 함수 선언문
+int Empty(){
+  //
+}
