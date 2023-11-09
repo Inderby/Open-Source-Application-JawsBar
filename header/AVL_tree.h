@@ -11,6 +11,7 @@
 #define OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 
 #include "Node.h"
+#include <algorithm>
 
 class AVL_Tree
 {
