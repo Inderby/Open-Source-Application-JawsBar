@@ -18,7 +18,7 @@ public:
     AVL_Tree(int value_to_root);
     int Find(int value_to_find);
     int Insert(int value_to_insert);
-    int Size();
+    int getsize() { return size_; }
     int Empty();
     void Maximum(int key_of_sub_root);
     void Minimum(int key_of_sub_root);
