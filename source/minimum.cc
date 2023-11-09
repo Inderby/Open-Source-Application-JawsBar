@@ -13,7 +13,7 @@
 // 최솟값을 구하는 함수 구현
 void Minimum(int key_of_sub_root){
   // 노드 포인터 타입 변수인 현재_노드에 엑시스트 함수 리턴 값으로 키에 맞는 노드 대입
-  Node* cur_node = Exist(int key_of_sub_root);
+  Node* cur_node = Exist(key_of_sub_root);
   // 널 포인트인지 확인하는 불 타입 변수
   bool null_check = true;
   // 깊이 측정 변수
