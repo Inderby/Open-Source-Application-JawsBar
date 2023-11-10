@@ -11,11 +11,13 @@
 #define OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 
 #include "Node.h"
+#include <algorithm>
 
 class AVL_Tree
 {
 public:
-    AVL_Tree(int value_to_root);
+
+    AVL_Tree();
     int Find(int value_to_find);
     int Insert(int value_to_insert);
     int Size() { return size_; }
@@ -26,14 +28,17 @@ public:
     void Erase(int key_of_erase);
 
 private:
-    int GetHeight(int key_of_node);
-    void Balancing(Node *node_to_balancing);
-    void ReParenting(Node *node_to_reParenting);
-    int GetBalanceFactor(Node *node_to_check);
-    Node *RotateLeft(Node *node_to_rotate);
-    Node *RotateRight(Node *node_to_rotate);
-    Node *root_;
-    int size_;
+  int GetHeight(Node *node_to_check);
+  void Balancing(Node *node_to_balancing);
+  void ReParenting(Node *node_to_reParenting);
+  int GetBalanceFactor(Node *node_to_check);
+  Node *Exist(int value_to_search);
+  Node *InternalInsert(Node *root_of_sub_tree, int value_to_insert);
+  Node *RotateLeft(Node *node_to_rotate);
+  Node *RotateRight(Node *node_to_rotate);
+  Node *Root();
+  Node *root_;
+  int size_;
 };
 
 #endif // OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
