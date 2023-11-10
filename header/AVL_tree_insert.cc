@@ -16,7 +16,8 @@ int AVL_Tree::Insert(int value_to_insert)
   if(this->size_ == 0)
   { 
     this->root_ = InternalInsert(this->root_, value_to_insert);
-      return 0;
+    this->size_++;
+    return 0;
   }
   else
   {
@@ -30,6 +31,7 @@ int AVL_Tree::Insert(int value_to_insert)
     {
       this->root_ = InternalInsert(this->root_, value_to_insert);
       depth_of_new_node = Find(value_to_insert);
+      this->size_++;
     }
     return depth_of_new_node;
   }
