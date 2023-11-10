@@ -12,6 +12,7 @@
 
 #include "Node.h"
 #include <algorithm>
+#include <iostream>
 
 class AVL_Tree
 {

@@ -7,14 +7,27 @@
  * Created by 12161580ParkJiHun on 2023/11/09.
  */
 
-#include "../header/AVL_tree.h"
-
-#include <iostream>
+#include "AVL_tree.h"
 
 // 최솟값을 구하는 함수 구현
-void Minimum(int key_of_sub_root){
-  // 노드 포인터 타입 변수인 현재_노드에 엑시스트 함수 리턴 값으로 키에 맞는 노드 대입
-  Node* cur_node = Exist(key_of_sub_root);
+void AVL_Tree::Minimum(int key_of_sub_root){
+  // 노드 포인터 타입 변수인 현재_노드에 메인 루트 대입
+  Node* cur_node = Root();
+  // 반복문을 통해 루트부터 시작해 서브 루트를 찾아가는 이진 탐색 알고리즘
+  while (cur_node->key != key_of_sub_root)
+  {
+    // 현재 노드 키 값보다 서브 루트 키 값이 작은 경우
+    if (cur_node->key > key_of_sub_root)
+    {
+      // 현재 노드를 현재 노드의 왼쪽 자식으로 변경
+      cur_node = cur_node->left_child;
+    // 현재 노드 키 값보다 서브 루트 키 값이 큰 경우(같은 경우 고려 안함)
+    } else {
+      // 현재 노드를 현재 노드의 오른쪽 자식으로 변경
+      cur_node = cur_node->right_child;
+    }
+  }  // 와일문 끝
+  
   // 널 포인트인지 확인하는 불 타입 변수
   bool null_check = true;
   // 깊이 측정 변수
@@ -37,6 +50,6 @@ void Minimum(int key_of_sub_root){
       count++;
     }
   }  // 와일문 끝
-  // 미니멈_노드 키 값이랑 뎁스 출력
-  std::cout << minimum_node->key << " " << count;
+  // 미니멈_노드 키 값 출력
+  std::cout << minimum_node->key;
 }  // Minimum 함수 끝
