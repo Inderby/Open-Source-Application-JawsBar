@@ -51,5 +51,5 @@ void AVL_Tree::Minimum(int key_of_sub_root){
     }
   }  // 와일문 끝
   // 미니멈_노드 키 값 출력
-  std::cout << minimum_node->key;
+  std::cout << minimum_node->key << " " << count << "\n";
 }  // Minimum 함수 끝
