@@ -7,8 +7,9 @@
  * Created by 12161580ParkJiHun on 2023/11/09.
  */
 
-#include <iostream>
 #include "../header/AVL_tree.h"
+
+#include <iostream>
 
 // 최솟값을 구하는 함수 구현
 void Minimum(int key_of_sub_root){
