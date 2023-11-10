@@ -34,5 +34,3 @@ void AVL_Tree::Maximum(int key_of_sub_root){
   std::cout << max_key << " " << max_node_depth << "\n";
   return;
 }
-~
-~
