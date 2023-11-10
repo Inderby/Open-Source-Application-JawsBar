@@ -16,7 +16,7 @@
 class AVL_Tree
 {
 public:
-  AVL_Tree(int value_to_root);
+  AVL_Tree();
   int Find(int value_to_find);
   int Insert(int value_to_insert);
   int Size();

@@ -10,4 +10,4 @@
 #include "AVL_tree.h"
 
 /*생성자 정의*/
-AVL_Tree::AVL_Tree(int value_to_root) : root_{new Node(value_to_root)}, size_{1} {};
+AVL_Tree::AVL_Tree() : root_{nullptr}, size_{0} {};
