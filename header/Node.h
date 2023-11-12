@@ -13,11 +13,11 @@
 struct Node
 {
 public:
-    int key;
-    Node *left_child = nullptr;
-    Node *right_child = nullptr;
-    int height = 1;
-    Node(int value) : key{value} {};
+  int key;
+  Node *left_child = nullptr;
+  Node *right_child = nullptr;
+  int height = 1;
+  Node(int value) : key{value} {};
 };
 
 #endif // OPENSOURCEAPPLICATION_HEADER_NODE_H_
