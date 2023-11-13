@@ -9,7 +9,7 @@
 
 #include "AVL_tree.h"
 
-int AVL_Tree::GetHeight(Node *node_of_check)
+int AVLTree::GetHeight(Node *node_of_check)
 {
   if (node_of_check == nullptr)
     return 0;

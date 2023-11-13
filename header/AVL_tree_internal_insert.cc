@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 /*내부적으로 재귀함수를 사용하여 노드 삽입을 하기위한 함수*/
-Node* AVL_Tree::InternalInsert(Node* root_of_sub_tree, int value_to_insert)
+Node* AVLTree::InternalInsert(Node* root_of_sub_tree, int value_to_insert)
 {
   /*트리가 비어있을 땐 바로 새로운 노드 삽입*/
   if (root_of_sub_tree == nullptr)

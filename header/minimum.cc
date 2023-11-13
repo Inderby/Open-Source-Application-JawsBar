@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 // 최솟값을 구하는 함수 구현
-void AVL_Tree::Minimum(int key_of_sub_root){
+void AVLTree::Minimum(int key_of_sub_root){
   // 노드 포인터 타입 변수인 현재_노드에 메인 루트 대입
   Node* cur_node = Root();
   // 반복문을 통해 루트부터 시작해 서브 루트를 찾아가는 이진 탐색 알고리즘

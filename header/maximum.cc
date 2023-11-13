@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 //find maximum node in sub_tree that key value is root
-void AVL_Tree::Maximum(int key_of_sub_root){
+void AVLTree::Maximum(int key_of_sub_root){
   //find node in AVL tree 
   Node* sub_root_node = Exist(key_of_sub_root);
   Node* max_node = sub_root_node;

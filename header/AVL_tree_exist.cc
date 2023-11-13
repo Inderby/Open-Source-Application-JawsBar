@@ -9,7 +9,7 @@
 
 #include "AVL_tree.h"
 
-Node *AVL_Tree::Exist(int value_to_find)
+Node *AVLTree::Exist(int value_to_find)
 {
   Node *node_to_search = root_;
   /*key값을 찾거나 없다면 break*/

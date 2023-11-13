@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 /*해당 노드를 기점으로 균형을 재조정을 시행하는 함수이다*/
-void AVL_Tree::Balancing(Node *node_to_balancing)
+void AVLTree::Balancing(Node *node_to_balancing)
 {
   {
     int value_of_node = node_to_balancing->key;

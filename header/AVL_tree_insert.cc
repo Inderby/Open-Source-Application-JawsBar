@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 /*인자로 들어온 값을 내부적으로 InternalInsert를 호출해 삽입하고 depth를 반환하는 함수*/
-int AVL_Tree::Insert(int value_to_insert)
+int AVLTree::Insert(int value_to_insert)
 {
   /*Tree가 비어 있는 경우 바로 삽입 수행*/
   if(this->size_ == 0)

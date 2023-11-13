@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 /*트리의 균형이 깨졌을 때 우회전을 시행하는 함수*/
-Node *AVL_Tree::RotateRight(Node *node_to_rotate)
+Node *AVLTree::RotateRight(Node *node_to_rotate)
 {
   Node *node = node_to_rotate->left_child;
   node_to_rotate->left_child = node->right_child;

@@ -14,11 +14,11 @@
 #include <algorithm>
 #include <iostream>
 
-class AVL_Tree
+class AVLTree
 {
 public:
 
-    AVL_Tree();
+    AVLTree();
     int Find(int value_to_find);
     int Insert(int value_to_insert);
     int Size() { return size_; }

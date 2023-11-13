@@ -9,7 +9,7 @@
 
 #include "AVL_tree.h"
 
-int AVL_Tree::Find(int value_to_find)
+int AVLTree::Find(int value_to_find)
 {
   Node *node_to_search = root_;
   int depth_of_find = 0;
