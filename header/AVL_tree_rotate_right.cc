@@ -16,7 +16,7 @@ Node *AVLTree::RotateRight(Node *node_to_rotate)
   node_to_rotate->left_child = node->right_child;
   node->right_child = node_to_rotate;
 
-  // 위치가 바뀌었으므로 높이를 재조정함.
+  //위치가 바뀌었으므로 높이를 재조정함.
   node_to_rotate->height = std::max(
     GetHeight(node_to_rotate->left_child), 
     GetHeight(node_to_rotate->right_child)) + 1;
