@@ -9,5 +9,5 @@
 
 #include "AVL_tree.h"
 
-/*생성자 정의*/
-AVL_Tree::AVL_Tree() : root_{nullptr}, size_{0} {};
+//생성자 정의
+AVLTree::AVLTree() : root_{nullptr}, size_{0} {};
