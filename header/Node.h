@@ -10,8 +10,7 @@
 #ifndef OPENSOURCEAPPLICATION_HEADER_NODE_H_
 #define OPENSOURCEAPPLICATION_HEADER_NODE_H_
 
-struct Node
-{
+struct Node {
 public:
   int key;
   Node *left_child = nullptr;

@@ -9,6 +9,4 @@
 
 #include "AVL_tree.h"
 
-Node *AVLTree::Root(){
-  return this->root_;
-}
+Node *AVLTree::Root() { return this->root_; }
