@@ -1,9 +1,10 @@
 #include "header/AVL_tree.h"
-#include <string>
 #include <stdio.h>
+#include <string>
 int main(int argc, char **argv) {
-  freopen("./input.txt", "r", stdin);
-  freopen("./output.txt", "w", stdout);
+  std::ios::sync_with_stdio(false);
+  std::cin.tie(nullptr);
+  std::cout.tie(nullptr);
   int test_case_count = 0;
   std::cin >> test_case_count;
 
@@ -33,7 +34,7 @@ int main(int argc, char **argv) {
       } else if (command == "empty") {
         avl_tree.Empty();
       } else { // command == "size"
-        std::cout << avl_tree.Size();
+        std::cout << avl_tree.Size() << "\n";
       }
     }
   }
