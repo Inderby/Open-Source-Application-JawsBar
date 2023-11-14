@@ -14,7 +14,6 @@ int AVLTree::Find(int value_to_find)
 {
   Node *node_to_search = root_;
   int depth_of_find = 0;
-  bool is_find = false;
 
   //key값을 찾거나 없다면 break함.
   while (node_to_search != nullptr && node_to_search->key != value_to_find)
