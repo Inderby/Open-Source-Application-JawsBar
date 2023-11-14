@@ -21,9 +21,9 @@ void AVLTree::Maximum(int key_of_sub_root) {
   }
 
   int max_key = max_node->key;
-  int max_node_depth = Find(max_key);
 
   // maximum Node의 key와 depth 출력함.
-  std::cout << max_key << " " << max_node_depth << "\n";
+  std::cout << max_key << " ";
+  Find(max_key);
   return;
 }

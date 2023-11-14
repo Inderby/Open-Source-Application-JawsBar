@@ -34,7 +34,7 @@ Node *AVLTree::InternalInsert(Node *root_of_sub_tree, int value_to_insert) {
       1;
 
   // Balancing Factor 측정하여 2 이상이면 재조정함.
-  Balancing(root_of_sub_tree);
+  Balancing(root_of_sub_tree, value_to_insert);
 
   return root_of_sub_tree;
 }

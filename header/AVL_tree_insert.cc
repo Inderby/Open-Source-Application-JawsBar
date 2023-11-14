@@ -25,12 +25,11 @@ int AVLTree::Insert(int value_to_insert) {
 
     int depth_of_new_node = 0;
     // 해당 value가 Tree내에 존재하지 않을 경우 수행함.
-    if ((depth_of_new_node = Find(value_to_insert)) == 0) {
+    if (Exist(value_to_insert) == nullptr) {
       this->root_ = InternalInsert(this->root_, value_to_insert);
       depth_of_new_node = Find(value_to_insert);
       this->size_++;
     }
-    std::cout << depth_of_new_node << "\n";
     return depth_of_new_node;
   }
 }

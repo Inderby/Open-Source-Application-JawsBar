@@ -23,8 +23,10 @@ int AVLTree::Find(int value_to_find) {
   }
 
   // 찾고자 하는 노드를 찾지 못하면 0을 반환함.
-  if (node_to_search == nullptr)
+  if (node_to_search == nullptr) {
+    std::cout << 0 << "\n";
     return 0;
+  }
 
   std::cout << depth_of_find << "\n";
   return depth_of_find;
