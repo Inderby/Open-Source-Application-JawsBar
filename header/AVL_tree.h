@@ -17,6 +17,7 @@
 class AVLTree {
 public:
   AVLTree();
+  ~AVLTree();
   int Find(int value_to_find);
   int Insert(int value_to_insert);
   int Size() { return size_; }
@@ -35,7 +36,7 @@ private:
   Node *InternalInsert(Node *root_of_sub_tree, int value_to_insert);
   Node *RotateLeft(Node *node_to_rotate);
   Node *RotateRight(Node *node_to_rotate);
-  Node *Root();
+  Node *Root() { return root_; };
   Node *root_;
   int size_;
 };
