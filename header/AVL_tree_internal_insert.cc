@@ -22,11 +22,13 @@ Node* AVLTree::InternalInsert(Node* root_of_sub_tree, int value_to_insert)
 
   if (root_of_sub_tree->key < value_to_insert)
   { //item이 key값보다 크다면 오른쪽으로 이동함.
-    root_of_sub_tree->right_child = InternalInsert(root_of_sub_tree->right_child, value_to_insert);
+    root_of_sub_tree->right_child = 
+      InternalInsert(root_of_sub_tree->right_child, value_to_insert);
   }
   else
   { //item이 key값보다 작다면 왼쪽으로 이동함.
-    root_of_sub_tree->left_child = InternalInsert(root_of_sub_tree->left_child, value_to_insert);
+    root_of_sub_tree->left_child =
+      InternalInsert(root_of_sub_tree->left_child, value_to_insert);
   }
 
   //새로운 노드가 추가되었으므로, 재귀적으로 부모노드들 높이를 1증가시킴.
