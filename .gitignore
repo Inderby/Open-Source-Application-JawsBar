@@ -458,7 +458,7 @@ FodyWeavers.xsd
 
 # VS Code files for those working on multiple tools
 *.code-workspace
-
+build/
 # Local History for Visual Studio Code
 
 # Windows Installer files from build outputs
@@ -466,6 +466,9 @@ FodyWeavers.xsd
 # JetBrains Rider
 *.sln.iml
 
+# Clion
+cmake-build-debug/
+.idea
 ### VisualStudio Patch ###
 # Additional files built by Visual Studio
 
