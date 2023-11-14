@@ -9,7 +9,6 @@ add_library(AVL_library
     AVL_tree_internal_insert.cc
     AVL_tree_maximum.cc
     AVL_tree_minimum.cc
-    AVL_tree_root.cc
     AVL_tree_rotate_left.cc
     AVL_tree_rotate_right.cc
     AVL_tree.cc
