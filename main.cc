@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
       } else if (command == "empty") {
         avl_tree.Empty();
       } else { // command == "size"
-        avl_tree.Size();
+        std::cout << avl_tree.Size();
       }
     }
   }
