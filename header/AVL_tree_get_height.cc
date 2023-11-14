@@ -9,7 +9,8 @@
 
 #include "AVL_tree.h"
 
-int AVL_Tree::GetHeight(Node *node_of_check)
+//노드의 height를 반환하는 함수임. 
+int AVLTree::GetHeight(Node *node_of_check)
 {
   if (node_of_check == nullptr)
     return 0;

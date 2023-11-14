@@ -9,14 +9,12 @@
 
 #include "AVL_tree.h"
 
-// 엠프티 함수 선언문
-int AVL_Tree::Empty(){
-  // 사이즈가 0이면 1 반환, 0이 아니고 양수면 0 반환, 음수면 에러 반환
+//AVL Tree가 empty하면 1, 아니면 0을 반환하는 함수임.
+void AVLTree::Empty(){
+  //사이즈가 0이면 1 반환, 0이 아니고 양수면 0 반환, 음수면 에러를 반환함. 
   if(Size() == 0){
-    return 1;
-  } else if(Size() > 0){
-    return 0;
+    std::cout << 1;
   } else {
-    return -1;
+    std::cout << 0;
   }
-}  // 함수 선언 끝
+} 

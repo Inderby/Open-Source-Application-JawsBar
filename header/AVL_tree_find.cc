@@ -9,19 +9,22 @@
 
 #include "AVL_tree.h"
 
-int AVL_Tree::Find(int value_to_find)
+//key값을 가진 Node의 depth를 출력하는 함수임.
+int AVLTree::Find(int value_to_find)
 {
   Node *node_to_search = root_;
   int depth_of_find = 0;
   bool is_find = false;
-  /*key값을 찾거나 없다면 break*/
+
+  //key값을 찾거나 없다면 break함.
   while (node_to_search != nullptr && node_to_search->key != value_to_find)
   {
     node_to_search = (value_to_find < node_to_search->key) ? 
       node_to_search->left_child : node_to_search->right_child;
     depth_of_find++;
   }
-
+  
+  //찾고자 하는 노드를 찾지 못하면 0을 반환함. 
   if (node_to_search == nullptr)
     return 0;
   return depth_of_find;
