@@ -26,6 +26,8 @@ public:
   std::pair<int, int> Minimum(int key_of_sub_root);
   void Rank(int key_of_rank);
   void Erase(int key_of_erase);
+  void SetIsPrint(bool flag_of_print) { is_print_ = flag_of_print; };
+  bool GetIsPrint() { return is_print_; };
 
 private:
   int GetHeight(Node *node_to_check);
@@ -39,6 +41,7 @@ private:
   Node *Root() { return root_; };
   Node *root_;
   int size_;
+  bool is_print_;
 };
 
 #endif // OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
