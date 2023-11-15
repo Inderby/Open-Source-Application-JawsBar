@@ -10,20 +10,20 @@
 #ifndef OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 #define OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 
-#include "Node.h"
+#include "node.h"
 #include <algorithm>
 #include <iostream>
 
 class AVLTree {
 public:
   AVLTree();
-  ~AVLTree();
+  ~AVLTree(){};
   int Find(int value_to_find);
   int Insert(int value_to_insert);
   int Size() { return size_; }
-  void Empty();
-  void Maximum(int key_of_sub_root);
-  void Minimum(int key_of_sub_root);
+  int Empty();
+  std::pair<int, int> Maximum(int key_of_sub_root);
+  std::pair<int, int> Minimum(int key_of_sub_root);
   void Rank(int key_of_rank);
   void Erase(int key_of_erase);
 
