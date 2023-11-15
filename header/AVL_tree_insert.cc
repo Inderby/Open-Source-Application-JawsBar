@@ -16,7 +16,9 @@ int AVLTree::Insert(int value_to_insert) {
   if (this->size_ == 0) {
     this->root_ = InternalInsert(this->root_, value_to_insert);
     this->size_++;
-    std::cout << 0 << "\n";
+    if (GetIsPrint()) {
+      std::cout << 0 << "\n";
+    }
     return 0;
   } else {
     // root의 key값과 동일할 경우 해당 depth인 0을 반환함.

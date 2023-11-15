@@ -10,7 +10,7 @@
 #include "AVL_tree.h"
 
 // key value가 root인 서브트리의 최댓값을 찾는 함수임.
-void AVLTree::Maximum(int key_of_sub_root) {
+std::pair<int, int> AVLTree::Maximum(int key_of_sub_root) {
   // key value를 가진 Node를 찾음.
   Node *sub_root_node = Exist(key_of_sub_root);
   Node *max_node = sub_root_node;
@@ -23,7 +23,9 @@ void AVLTree::Maximum(int key_of_sub_root) {
   int max_key = max_node->key;
 
   // maximum Node의 key와 depth 출력함.
-  std::cout << max_key << " ";
-  Find(max_key);
-  return;
+  if (GetIsPrint()) {
+    std::cout << max_key << " ";
+  }
+  int depth_of_key = Find(max_key);
+  return {max_key, depth_of_key};
 }
