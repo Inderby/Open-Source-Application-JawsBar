@@ -23,7 +23,9 @@ std::pair<int, int> AVLTree::Maximum(int key_of_sub_root) {
   int max_key = max_node->key;
 
   // maximum Node의 key와 depth 출력함.
-  std::cout << max_key << " ";
+  if (GetIsPrint()) {
+    std::cout << max_key << " ";
+  }
   int depth_of_key = Find(max_key);
   return {max_key, depth_of_key};
 }

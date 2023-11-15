@@ -29,7 +29,9 @@ std::pair<int, int> AVLTree::Minimum(int key_of_sub_root) {
   }
 
   // minimum Node의 key값과 depth값 출력함.
-  std::cout << minimum_node->key << " ";
+  if (GetIsPrint()) {
+    std::cout << minimum_node->key << " ";
+  }
   int depth_of_key = Find(minimum_node->key);
   return {minimum_node->key, depth_of_key};
 }

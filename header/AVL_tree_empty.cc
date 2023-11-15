@@ -13,10 +13,14 @@
 int AVLTree::Empty() {
   // 사이즈가 0이면 1 반환, 0이 아니고 양수면 0 반환, 음수면 에러를 반환함.
   if (Size() == 0) {
-    std::cout << 1 << "\n";
+    if (GetIsPrint()) {
+      std::cout << 1 << "\n";
+    }
     return 1;
   } else {
-    std::cout << 0 << "\n";
+    if (GetIsPrint()) {
+      std::cout << 0 << "\n";
+    }
     return 0;
   }
 }
