@@ -13,7 +13,6 @@
 std::pair<int, int> AVLTree::Minimum(int key_of_sub_root) {
   Node *sub_root_node = Exist(key_of_sub_root);
   bool null_check = true;
-  int node_depth = 0;
 
   // 미니멈 노드를 저장할 변수에 일단 현재 노드 저장함.
   Node *minimum_node = sub_root_node;
@@ -24,7 +23,6 @@ std::pair<int, int> AVLTree::Minimum(int key_of_sub_root) {
       null_check = false;
     } else {
       minimum_node = minimum_node->left_child;
-      node_depth++;
     }
   }
 
