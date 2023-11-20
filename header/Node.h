@@ -15,7 +15,9 @@ public:
   int key;
   Node *left_child = nullptr;
   Node *right_child = nullptr;
+  Node *parent = nullptr;
   int height = 1;
+  int children_n_me = 1;
   Node(int value) : key{value} {};
 };
 
