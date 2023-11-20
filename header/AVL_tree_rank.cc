@@ -9,6 +9,10 @@
 
 #include "AVL_tree.h"
 
+void AVLTree::Rank(int key_of_rank){
+  //
+}
+
 /*
 // key값을 가진 Node의 depth를 출력하는 함수임.
 int AVLTree::Find(int value_to_find) {
