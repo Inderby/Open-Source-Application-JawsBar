@@ -8,6 +8,7 @@
 #
 add_library(AVL_library 
     AVL_tree_balancing.cc
+    AVL_tree_children.cc
     AVL_tree_empty.cc
     AVL_tree_exist.cc
     AVL_tree_find.cc

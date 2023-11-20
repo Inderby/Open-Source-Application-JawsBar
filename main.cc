@@ -41,6 +41,9 @@ int main(int argc, char **argv) {
         avl_tree.Maximum(value);
       } else if (command == "empty") {
         avl_tree.Empty();
+      } else if (command == "rank") {
+        std::cin >> value;
+        avl_tree.Rank(value);
       } else { // command == "size"
         std::cout << avl_tree.Size() << "\n";
       }

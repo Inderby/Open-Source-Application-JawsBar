@@ -9,35 +9,27 @@
 
 #include "AVL_tree.h"
 
-void AVLTree::Rank(int key_of_rank){
-  //
-}
+std::pair<int, int> AVLTree::Rank(int key_of_rank){
+  Node *cur_node = Exist(key_of_rank);
+  // rank 저장 변수 선언, 자기 자신을 포함하니 1로 초기화.
+  int rank = 1;
+  // 우선 자기 왼쪽 서브트리 노드수 전부 더함
+  rank += cur_node->left_child->children_n_me;
+  cur_node = cur_node->parent;
 
-/*
-// key값을 가진 Node의 depth를 출력하는 함수임.
-int AVLTree::Find(int value_to_find) {
-  Node *node_to_search = root_;
-  int depth_of_find = 0;
-
-  // key값을 찾거나 없다면 break함.
-  while (node_to_search != nullptr && node_to_search->key != value_to_find) {
-    node_to_search = (value_to_find < node_to_search->key)
-                         ? node_to_search->left_child
-                         : node_to_search->right_child;
-    depth_of_find++;
+  // 루트까지 올라가면서 만난 부모 노드의 키가 자기보다 크면 1만 증가, 자기보다 작으면 왼쪽 자식노드들 총 개수를 더함.
+  while (cur_node != nullptr){
+    if (cur_node->key < key_of_rank) {
+      rank += cur_node->left_child->children_n_me + 1;
+    } else { rank++; }
+    cur_node = cur_node->parent;
   }
 
-  // 찾고자 하는 노드를 찾지 못하면 0을 반환함.
-  if (node_to_search == nullptr) {
-    if (GetIsPrint()) {
-      std::cout << 0 << "\n";
-    }
-    return 0;
-  }
-
+  // Node의 depth와 rank를 출력함.
+  int depth_of_key = Find(key_of_rank);
   if (GetIsPrint()) {
-    std::cout << depth_of_find << "\n";
+    std::cout << depth_of_key << " " << rank << "\n";
   }
-  return depth_of_find;
+  
+  return {depth_of_key, rank};
 }
-*/
