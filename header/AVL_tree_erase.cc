@@ -23,4 +23,5 @@ void AVLTree::Erase(int key_of_erase) {
         this->root_ = ReParenting(this->root_, key_of_erase);
         return;
     }
+    
 }
