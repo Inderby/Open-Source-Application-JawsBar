@@ -26,7 +26,9 @@ std::pair<int, int> AVLTree::Rank(int key_of_rank){
   }
 
   // Node의 depth와 rank를 출력함.
+  SetIsPrint(false);
   int depth_of_key = Find(key_of_rank);
+  SetIsPrint(true);
   if (GetIsPrint()) {
     std::cout << depth_of_key << " " << rank << "\n";
   }
