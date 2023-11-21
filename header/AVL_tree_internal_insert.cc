@@ -34,7 +34,9 @@ Node *AVLTree::InternalInsert(Node *root_of_sub_tree, int value_to_insert) {
       std::max(GetHeight(root_of_sub_tree->left_child),
                GetHeight(root_of_sub_tree->right_child)) +
       1;
-  Children(root_of_sub_tree->parent);
+
+  Node *parent_node = root_of_sub_tree->parent;
+  Children(parent_node);
 
   // Balancing Factor 측정하여 2 이상이면 재조정함.
   Balancing(root_of_sub_tree, value_to_insert);

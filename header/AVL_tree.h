@@ -10,7 +10,7 @@
 #ifndef OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 #define OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 
-#include "node.h"
+#include "Node.h"
 #include <algorithm>
 #include <iostream>
 

@@ -10,13 +10,14 @@
 #include "AVL_tree.h"
 
 // 노드의 children_n_me를 업데이트하는 함수임.
-void Children(Node *node_to_update) {
+void AVLTree::Children(Node *node_to_update) {
   // 부모 노드가 널포인터일 경우 그대로 종료함.
-  if(node_to_update == nullptr) return;
+  if (node_to_update == nullptr)
+    return;
   // 부모 노드가 존재한다면 부모 노드를 계속 호출하면서 칠드런 1 증가함.
-  if(node_to_update->parent != nullptr){
+  if (node_to_update->parent != nullptr) {
     Children(node_to_update->parent);
   } else {
-  node_to_update->children_n_me++;
+    node_to_update->children_n_me++;
   }
 }
