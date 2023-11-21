@@ -21,7 +21,7 @@ std::pair<int, int> AVLTree::Rank(int key_of_rank){
   while (cur_node != nullptr){
     if (cur_node->key < key_of_rank) {
       rank += cur_node->left_child->children_n_me + 1;
-    } else { rank++; }
+    }
     cur_node = cur_node->parent;
   }
 
