@@ -20,6 +20,7 @@ int AVLTree::Erase(int key_of_erase) {
     return 0;
   } else {
     // node가 존재할 경우에는 depth를 출력하고 삭제를 진행함.
+    this->size_--;
     int value_to_return = Find(key_of_erase);
     this->root_ = ReParenting(this->root_, key_of_erase);
     return value_to_return;
