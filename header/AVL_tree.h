@@ -33,6 +33,7 @@ private:
   int GetHeight(Node *node_to_check);
   void Balancing(Node *&node_to_balancing, int value_of_balancing);
   int GetBalanceFactor(Node *node_to_check);
+  int GetSizeOfSubTree(Node *root_of_sub_tree);
   Node *Exist(int value_to_search);
   Node *InternalInsert(Node *root_of_sub_tree, int value_to_insert);
   Node *ReParenting(Node *node_to_reParenting, int key_of_erase);
