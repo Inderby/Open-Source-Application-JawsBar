@@ -9,19 +9,19 @@
 
 #include "AVL_tree.h"
 
-void AVLTree::Erase(int key_of_erase) {
-    Node* del_node = Exist(key_of_erase);
+int AVLTree::Erase(int key_of_erase) {
+  Node *del_node = Exist(key_of_erase);
 
-    //node가 없을 경우 0을 출력함.
-    if (del_node == nullptr) {
-        std::cout << 0 << "\n";
-        return;
+  // node가 없을 경우 0을 출력함.
+  if (del_node == nullptr) {
+    if (GetIsPrint()) {
+      std::cout << 0 << "\n";
     }
-    else {
-        //node가 존재할 경우에는 depth를 출력하고 삭제를 진행함. 
-        Find(key_of_erase);
-        this->root_ = ReParenting(this->root_, key_of_erase);
-        return;
-    }
-    
+    return 0;
+  } else {
+    // node가 존재할 경우에는 depth를 출력하고 삭제를 진행함.
+    int value_to_return = Find(key_of_erase);
+    this->root_ = ReParenting(this->root_, key_of_erase);
+    return value_to_return;
+  }
 }
