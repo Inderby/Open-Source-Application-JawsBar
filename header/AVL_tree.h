@@ -24,8 +24,8 @@ public:
   int Empty();
   std::pair<int, int> Maximum(int key_of_sub_root);
   std::pair<int, int> Minimum(int key_of_sub_root);
-  void Rank(int key_of_rank);
-  void Erase(int key_of_erase);
+  std::pair<int, int> Rank(int key_of_rank);
+  int Erase(int key_of_erase);
   void SetIsPrint(bool flag_of_print) { is_print_ = flag_of_print; };
   bool GetIsPrint() { return is_print_; };
 
