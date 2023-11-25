@@ -15,6 +15,7 @@ int AVLTree::Insert(int value_to_insert) {
   // Tree가 비어 있는 경우 바로 삽입 수행함.
   if (this->size_ == 0) {
     this->root_ = InternalInsert(this->root_, value_to_insert);
+    this->root_->size_of_sub_tree++;
     this->size_++;
     if (GetIsPrint()) {
       std::cout << 0 << "\n";
