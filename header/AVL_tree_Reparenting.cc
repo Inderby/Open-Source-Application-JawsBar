@@ -17,10 +17,10 @@ Node* AVLTree::ReParenting(Node* cur_node, int key_of_erase) {
 
     // 현재 노드의 값이 찾는 값이 아닐 경우 재귀함수를 호출함. 
     if (cur_node->key < key_of_erase) {
-        cur_node->left_child = ReParenting(cur_node->left_child, key_of_erase);
+        cur_node->right_child = ReParenting(cur_node->right_child, key_of_erase);
     }
     else if (cur_node->key > key_of_erase) {
-        cur_node->right_child = ReParenting(cur_node->right_child, key_of_erase);
+        cur_node->left_child = ReParenting(cur_node->left_child, key_of_erase);
     }
 
 
@@ -61,7 +61,9 @@ Node* AVLTree::ReParenting(Node* cur_node, int key_of_erase) {
     cur_node->height = std::max(GetHeight(cur_node->left_child),
         GetHeight(cur_node->right_child)) +
         1;
-
+    cur_node->size_of_sub_tree =
+      GetSizeOfSubTree(cur_node->left_child) +
+      GetSizeOfSubTree(cur_node->right_child) + 1;
     // Balancing 시행함.
     Balancing(cur_node, key_of_erase);
 
