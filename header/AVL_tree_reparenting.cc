@@ -9,6 +9,7 @@
 
 #include "AVL_tree.h"
 
+// 노드 삭제 시 부모와 자식관계를 수정하고, balancing을 시행하는 함수임.
 Node *AVLTree::ReParenting(Node *cur_node, int key_of_erase) {
   // 노드가 존재하지 않으면 0을 출력함.
   if (cur_node == nullptr) {

@@ -9,6 +9,8 @@
 
 #include "AVL_tree.h"
 
+// 해당 key를 가진 노드의 depth를 출력한 후 삭제하고,
+// 해당 key를 가진 노드가 없을 경우 0을 출력하는 함수임.
 int AVLTree::Erase(int key_of_erase) {
   Node *del_node = Exist(key_of_erase);
 
