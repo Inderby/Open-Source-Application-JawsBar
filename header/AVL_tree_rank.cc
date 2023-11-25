@@ -36,6 +36,7 @@ std::pair<int, int> AVLTree::Rank(int key_of_rank) {
     return {0, 0};
   }
 
+  rank_of_node += GetSizeOfSubTree(node_to_search->left_child);
   if (GetIsPrint()) {
     std::cout << depth_of_node << " " << rank_of_node + 1 << "\n";
   }
