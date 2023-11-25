@@ -19,9 +19,12 @@ Node *AVLTree::RotateLeft(Node *node_to_rotate) {
   node_to_rotate->height = std::max(GetHeight(node_to_rotate->left_child),
                                     GetHeight(node_to_rotate->right_child)) +
                            1;
-
+  node_to_rotate->size_of_sub_tree =
+      GetSizeOfSubTree(node_to_rotate->left_child) +
+      GetSizeOfSubTree(node_to_rotate->right_child) + 1;
   node->height =
       std::max(GetHeight(node->left_child), GetHeight(node->right_child)) + 1;
-
+  node->size_of_sub_tree = GetSizeOfSubTree(node->left_child) +
+                           GetSizeOfSubTree(node->right_child) + 1;
   return node;
 }

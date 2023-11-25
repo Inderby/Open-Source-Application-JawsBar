@@ -13,11 +13,13 @@ int main(int argc, char **argv) {
   std::ios::sync_with_stdio(false);
   std::cin.tie(nullptr);
   std::cout.tie(nullptr);
+
   int test_case_count = 0;
   std::cin >> test_case_count;
 
   while (test_case_count--) {
     AVLTree avl_tree = AVLTree();
+    avl_tree.SetIsPrint(true);
     int question_cnt = 0;
 
     std::cin >> question_cnt;
@@ -41,6 +43,12 @@ int main(int argc, char **argv) {
         avl_tree.Maximum(value);
       } else if (command == "empty") {
         avl_tree.Empty();
+      } else if (command == "rank") {
+        std::cin >> value;
+        avl_tree.Rank(value);
+      } else if (command == "erase") {
+        std::cin >> value;
+        avl_tree.Erase(value);
       } else { // command == "size"
         std::cout << avl_tree.Size() << "\n";
       }

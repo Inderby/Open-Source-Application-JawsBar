@@ -7,6 +7,10 @@
 # Created by 12191572KimYongBin on 2023/11/14.
 #
 add_library(AVL_library 
+    AVL_tree_reparenting.cc
+    AVL_tree_get_size_of_sub_tree.cc
+    AVL_tree_rank.cc
+    AVL_tree_erase.cc
     AVL_tree_balancing.cc
     AVL_tree_empty.cc
     AVL_tree_exist.cc

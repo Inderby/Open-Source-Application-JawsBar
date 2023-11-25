@@ -12,10 +12,11 @@
 
 struct Node {
 public:
-  int key;
+  int key = 0;
   Node *left_child = nullptr;
   Node *right_child = nullptr;
   int height = 1;
+  int size_of_sub_tree = 1;
   Node(int value) : key{value} {};
 };
 
