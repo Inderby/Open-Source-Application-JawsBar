@@ -60,7 +60,7 @@ Node* AVLTree::ReParenting(Node* cur_node, int key_of_erase) {
     cur_node->height = std::max(GetHeight(cur_node->left_child),
         GetHeight(cur_node->right_child)) +
         1;
-  
+
     cur_node->size_of_sub_tree = GetSizeOfSubTree(cur_node->left_child) +
         GetSizeOfSubTree(cur_node->right_child) + 1;
 
@@ -80,12 +80,12 @@ Node* AVLTree::ReParenting(Node* cur_node, int key_of_erase) {
     }
     // case 3(right right) : balance_factor가 -1~1을 벗어난 노드를 기준으로
     // 오른쪽, 오른쪽 노드가 존재하는 경우
-    else if (balance_factor < -1 && GetBalanceFactor(cur_node->right_child) < 0) {
+    else if (balance_factor < -1 && GetBalanceFactor(cur_node->right_child) <= 0) {
         return RotateLeft(cur_node);
     }
     // case 4(right left) : balance_factor가 -1~1을 벗어난 노드를 기준으로
     // 오른쪽, 왼쪽 노드가 존재하는 경우
-    else if (balance_factor < -1 && GetBalanceFactor(cur_node->right_child) >= 0) {
+    else if (balance_factor < -1 && GetBalanceFactor(cur_node->right_child) > 0) {
         cur_node->right_child = RotateRight(cur_node->right_child);
         return RotateLeft(cur_node);
     }
