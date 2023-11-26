@@ -1,0 +1,23 @@
+22
+insert 15
+insert 24
+find 18
+empty -1
+insert 19
+erase 15
+insert 22
+find 19
+maximum 22
+insert 11
+minimum 11
+rank 19
+insert 29
+insert 9
+rank 10
+minimum 29
+insert 33
+maximum 22
+empty -1
+erase 19
+insert 7
+size -1
