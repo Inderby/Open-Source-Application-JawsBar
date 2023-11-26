@@ -1,0 +1,26 @@
+25
+insert 500
+insert 472
+minimum 472
+insert 488
+maximum 500
+insert 502
+size -1
+empty -1
+find 490
+erase 500
+rank 488
+insert 493
+insert 349
+minimum 349
+find 500
+insert 499
+maximum 493
+rank 502
+insert 380
+find 488
+rank 500
+erase 502
+size -1
+empty -1
+find 349

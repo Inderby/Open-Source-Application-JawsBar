@@ -1,0 +1,20 @@
+19
+size -1
+empty -1
+insert 3
+maximum 3
+insert 5
+minimum 5
+insert 9
+insert 10
+insert 19
+insert 21
+find 10
+maximum 19
+minimum 21
+insert 11
+maximum 11
+minimum 11
+size -1
+empty -1
+find 9
