@@ -9,7 +9,7 @@
 
 #include "AVL_tree.h"
 
-// 노드의 depth와 rank를 공백으로 구분하여 출력하는 함수임. 
+// 노드의 depth와 rank를 공백으로 구분하여 출력하는 함수임.
 std::pair<int, int> AVLTree::Rank(int key_of_rank) {
   Node *node_to_search = root_;
   int depth_of_node = 0;
@@ -34,12 +34,12 @@ std::pair<int, int> AVLTree::Rank(int key_of_rank) {
     if (GetIsPrint()) {
       std::cout << 0 << "\n";
     }
-    return {0, 0};
+    return {0, -1};
   }
 
   rank_of_node += GetSizeOfSubTree(node_to_search->left_child);
   if (GetIsPrint()) {
     std::cout << depth_of_node << " " << rank_of_node + 1 << "\n";
   }
-  return {depth_of_node, rank_of_node};
+  return {depth_of_node, rank_of_node + 1};
 }

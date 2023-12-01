@@ -93,6 +93,10 @@ AVLTreeFixture::Perform(std::pair<std::string, int> command_and_value) {
     return_value = avl_tree_.Maximum(value);
   } else if (command == "empty") {
     return_value = {avl_tree_.Empty(), -1};
+  } else if (command == "rank") {
+    return_value = {avl_tree_.Rank(value)};
+  } else if (command == "erase") {
+    return_value = {avl_tree_.Erase(value), -1};
   } else { // command == "size"
     return_value = {avl_tree_.Size(), -1};
   }
@@ -102,7 +106,6 @@ AVLTreeFixture::Perform(std::pair<std::string, int> command_and_value) {
 // 모든 함수를 사용하는 통합 테스트를 시행
 TEST_P(AVLTreeFixture, TestAllFunction) {
   std::vector<std::pair<int, int>> generate_result;
-  std::cout << input_.size() << "\n";
   for (int i = 0; i < input_.size(); i++) {
     generate_result.push_back(Perform(input_[i]));
   }
