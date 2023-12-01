@@ -1,0 +1,18 @@
+17
+empty -1
+size -1
+insert 1
+find 4
+insert 5
+insert 9
+insert 12
+find 5
+insert 20
+size -1
+empty -1
+insert 18
+insert 11
+minimum 5
+maximum 9
+insert 7
+find 7
