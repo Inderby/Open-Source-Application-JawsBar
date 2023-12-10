@@ -15,28 +15,37 @@
 std::string input_file;
 std::string output_file;
 
-class AVLTreeFixture
-    : public testing::TestWithParam<
-          std::pair<std::vector<int>, std::vector<std::pair<int, int>>>> {
+class AVLTreeFixture : public testing::TestWithParam<
+                           std::tuple<std::vector<int>, std::vector<int>,
+                                      std::vector<std::pair<int, int>>>> {
 public:
   void SetUp() override;
-  static int Perform(int);
+  int Perform(int);
 
 protected:
-  static AVLTree avl_tree_;
+  AVLTree avl_tree_;
   std::vector<int> input_;
   std::vector<std::pair<int, int>> expected_;
+  std::vector<int> init_values_;
 };
 
 // input과 예상되는 output을 각 테스트마다 세팅해주는 함수
 void AVLTreeFixture::SetUp() {
-  input_ = GetParam().first;
-  expected_ = GetParam().second;
+  std::tuple<std::vector<int>, std::vector<int>,
+             std::vector<std::pair<int, int>>>
+      test_collect = GetParam();
+  init_values_ = std::get<0>(test_collect);
+  for (int i = 0; i < init_values_.size(); i++)
+    Perform(init_values_[i]);
+
+  input_ = std::get<1>(test_collect);
+  expected_ = std::get<2>(test_collect);
 }
 
 // test.in 파일과 test.out파일의 값을 각각 vector로 변환하여
 // pair<input,output>으로 변환 시키는 함수
-static std::pair<std::vector<int>, std::vector<std::pair<int, int>>>
+static std::tuple<std::vector<int>, std::vector<int>,
+                  std::vector<std::pair<int, int>>>
 ReadTestCases(const std::string &filename_input,
               const std::string &filename_output) {
 
@@ -44,7 +53,7 @@ ReadTestCases(const std::string &filename_input,
   std::ifstream file_output(filename_output);
   std::vector<int> input;
   std::vector<std::pair<int, int>> expected;
-
+  std::vector<int> init_values;
   // 파일의 두 read 권한이 있을 경우 input, output 벡터 생성
   if (file_input.is_open() && file_output.is_open()) {
     int number_of_init_command = 0, number_of_commmand = 0, value = 0,
@@ -55,7 +64,7 @@ ReadTestCases(const std::string &filename_input,
     // 특정 시점의 avl tree를 나타내주기 위해 초기값을 세팅해줌
     for (int i = 0; i < number_of_init_command; i++) {
       file_input >> value;
-      AVLTreeFixture::Perform(value);
+      init_values.push_back(value);
     }
 
     file_input >> number_of_commmand;
@@ -73,7 +82,7 @@ ReadTestCases(const std::string &filename_input,
     file_input.close();
     file_output.close();
   }
-  return {input, expected};
+  return {init_values, input, expected};
 }
 
 // test로 들어올 값을 파라미터로 입력 받게 하는 googletest 라이브러리 매크로
