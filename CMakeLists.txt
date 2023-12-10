@@ -21,5 +21,5 @@ add_subdirectory(header)
 add_executable(mainApp main.cc)
 target_link_libraries(mainApp AVL_library)
 
-add_executable(testRunner integrate_test_code.cc)
+add_executable(testRunner testing/integrate_test_code.cc)
 target_link_libraries(testRunner AVL_library ${GTEST_LIBRARIES})
