@@ -21,5 +21,23 @@ add_subdirectory(header)
 add_executable(mainApp main.cc)
 target_link_libraries(mainApp AVL_library)
 
-add_executable(testRunner integrate_test_code.cc)
-target_link_libraries(testRunner AVL_library ${GTEST_LIBRARIES})
+add_executable(IntegrateTestRunner testing/integrate_test_code.cc)
+target_link_libraries(IntegrateTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(InsertTestRunner testing/insert_test_code.cc)
+target_link_libraries(InsertTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(FindTestRunner testing/find_test_code.cc)
+target_link_libraries(FindTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(SizeTestRunner testing/size_test_code.cc)
+target_link_libraries(SizeTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(EmptyTestRunner testing/empty_test_code.cc)
+target_link_libraries(EmptyTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(MaximumTestRunner testing/maximum_test_code.cc)
+target_link_libraries(MaximumTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(MinimumRunner testing/minimum_test_code.cc)
+target_link_libraries(MinimumRunner AVL_library ${GTEST_LIBRARIES})

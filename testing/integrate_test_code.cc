@@ -6,7 +6,7 @@
  *
  * Created by 12191572KimYongBin on 2023/11/15.
  */
-#include "header/AVL_tree.h"
+#include "../header/AVL_tree.h"
 #include <fstream>
 #include <gtest/gtest.h>
 #include <iostream>
@@ -51,7 +51,7 @@ ReadTestCases(const std::string &filename_input,
 
   // 파일의 두 read 권한이 있을 경우 input, output 벡터 생성
   if (file_input.is_open() && file_output.is_open()) {
-    int number_of_commmand, value, result_1, result_2;
+    int number_of_commmand = 0, value = 0, result_1 = 0, result_2 = 0;
     std::string command;
     file_input >> number_of_commmand;
 
