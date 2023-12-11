@@ -15,15 +15,16 @@
 
 class Set {
 public:
-  virtual int Find(int value_to_find);
-  virtual int Insert(int value_to_insert);
-  virtual int Size();
-  virtual int Empty();
-  virtual std::pair<int, int> Maximum(int key_of_sub_root);
-  virtual std::pair<int, int> Minimum(int key_of_sub_root);
-  virtual std::pair<int, int> Rank(int key_of_rank);
-  virtual int Erase(int key_of_erase);
-  virtual Node *Root();
+  Set(){};
+  int Find(int value_to_find);
+  int Insert(int value_to_insert);
+  int Size();
+  int Empty();
+  std::pair<int, int> Maximum(int key_of_sub_root);
+  std::pair<int, int> Minimum(int key_of_sub_root);
+  std::pair<int, int> Rank(int key_of_rank);
+  int Erase(int key_of_erase);
+  Node *Root();
 };
 
 #endif // OPENSOURCEAPPLICATION_HEADER_Set_H_
