@@ -39,5 +39,11 @@ target_link_libraries(EmptyTestRunner AVL_library ${GTEST_LIBRARIES})
 add_executable(MaximumTestRunner testing/maximum_test_code.cc)
 target_link_libraries(MaximumTestRunner AVL_library ${GTEST_LIBRARIES})
 
-add_executable(MinimumRunner testing/minimum_test_code.cc)
+add_executable(MinimumTestRunner testing/minimum_test_code.cc)
 target_link_libraries(MinimumRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(RankTestRunner testing/rank_test_code.cc)
+target_link_libraries(RankTestRunner AVL_library ${GTEST_LIBRARIES})
+
+add_executable(EraseTestRunner testing/erase_test_code.cc)
+target_link_libraries(EraseTestRunner AVL_library ${GTEST_LIBRARIES})
