@@ -11,10 +11,11 @@
 #define OPENSOURCEAPPLICATION_HEADER_AVLTREE_H_
 
 #include "node.h"
+#include "set.h"
 #include <algorithm>
 #include <iostream>
 
-class AVLTree {
+class AVLTree : public Set {
 public:
   AVLTree();
   ~AVLTree(){};
@@ -28,6 +29,7 @@ public:
   int Erase(int key_of_erase);
   void SetIsPrint(bool flag_of_print) { is_print_ = flag_of_print; };
   bool GetIsPrint() { return is_print_; };
+  Node *Root() { return root_; };
 
 private:
   int GetHeight(Node *node_to_check);
@@ -39,7 +41,6 @@ private:
   Node *ReParenting(Node *node_to_reParenting, int key_of_erase);
   Node *RotateLeft(Node *node_to_rotate);
   Node *RotateRight(Node *node_to_rotate);
-  Node *Root() { return root_; };
   Node *root_;
   int size_;
   bool is_print_;
