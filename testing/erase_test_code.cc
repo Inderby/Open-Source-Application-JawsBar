@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * Created by 12191572KimYongBin on 2023/12/10.
+ * Created by 12191572KimYongBin on 2023/12/11.
  */
 
 #include "../header/AVL_tree.h"
@@ -94,11 +94,11 @@ int AVLTreeFixture::Perform(int value_to_insert) {
   return return_value;
 }
 
-// Find 함수를 사용하는 unit 테스트를 시행
+// Erase 함수를 사용하는 unit 테스트를 시행
 TEST_P(AVLTreeFixture, TestAllFunction) {
   std::vector<int> generate_result;
   for (int i = 0; i < input_.size(); i++) {
-    generate_result.push_back(AVLTreeFixture::avl_tree_.Find(input_[i]));
+    generate_result.push_back(AVLTreeFixture::avl_tree_.Erase(input_[i]));
   }
 
   ASSERT_EQ(generate_result, expected_);
