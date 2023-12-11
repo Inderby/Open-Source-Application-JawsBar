@@ -22,14 +22,14 @@ public:
 
 private:
   void DisplayBoard();
-  int Find(int value_to_find);
-  int Insert(int value_to_insert);
-  int Size();
-  int Empty();
-  std::pair<int, int> Maximum(int key_of_sub_root);
-  std::pair<int, int> Minimum(int key_of_sub_root);
-  std::pair<int, int> Rank(int key_of_rank);
-  int Erase(int key_of_erase);
+  int Find(int value_to_find) override;
+  int Insert(int value_to_insert) override;
+  int Size() override;
+  int Empty() override;
+  std::pair<int, int> Maximum(int key_of_sub_root) override;
+  std::pair<int, int> Minimum(int key_of_sub_root) override;
+  std::pair<int, int> Rank(int key_of_rank) override;
+  int Erase(int key_of_erase) override;
   void PrintHelper();
   void PreOrderHelper(Node *node_to_travel);
   void PostOrderHelper(Node *node_to_travel);
