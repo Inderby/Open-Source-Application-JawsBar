@@ -24,4 +24,5 @@ add_library(AVL_library
     AVL_tree_rotate_left.cc
     AVL_tree_rotate_right.cc
     AVL_tree.cc
+    set.h
 )
