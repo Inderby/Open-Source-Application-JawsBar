@@ -1,0 +1,13 @@
+12
+insert 5
+insert 9
+insert 3
+erase 3
+erase 5
+empty -1
+erase 9
+empty -1
+insert 7
+empty -1
+erase 7
+empty -1
