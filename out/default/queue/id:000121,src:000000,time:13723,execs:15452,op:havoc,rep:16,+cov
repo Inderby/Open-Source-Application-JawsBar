@@ -1,0 +1,15 @@
+2
+20
+empty
+insert 18
+insert 17
+insert 4
+
+find 18
+insert 13
+insert 1
+rank 3
+insert 2
+14
+insert 14
+erase 1
